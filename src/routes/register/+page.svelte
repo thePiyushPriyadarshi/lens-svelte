@@ -20,6 +20,9 @@
 		}
 	}).then((response) => response.json())
 	.then((json)=> {alert(json.message)
+    email = "";
+    password = "";
+    name = "";
 		isLoading=false
 		if(json.status) goto("/login")
 	})
@@ -27,9 +30,6 @@
     console.error('Error:', error);
 });
  
-    email = "";
-    password = "";
-    name = "";
   }
 </script>
 
