@@ -12,11 +12,11 @@
     },
     {
       label: "Company",
-      path: "#company",
+      path: "/",
     },
     {
       label: "Blogs",
-      path: "#blogs",
+      path: "/",
     },
   ];
   let isLogin = false;

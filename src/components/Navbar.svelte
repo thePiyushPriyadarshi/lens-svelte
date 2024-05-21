@@ -8,11 +8,11 @@
     },
     {
       label: "Company",
-      path: "#company",
+      path: "/",
     },
     {
       label: "Blogs",
-      path: "#blogs",
+      path: "/",
     },
   ];
   let isLogin = false;
@@ -53,11 +53,6 @@
     <div class="hidden lg:block">
       <div class="flex gap-6 items-center justify-center">
         <a href="https://makemyweb.ai/en" target="_blank">MakeMyWeb.</a>
-        <!-- {
-              navbarOptions.map((option,i)=>(
-                  <Link key={i} class={`${route(option.path) ? "bg-gradient-to-r text-transparent from-[#0796FF] to-[#91F6FF]" : ""}  font-semibold bg-clip-text`} href={option.path}>{option.label}</Link>
-              ))
-          } -->
         {#each navbarOptions as option}
           <a
             class={`${option.path == "/" ? "bg-gradient-to-r text-transparent from-[#0796FF] to-[#91F6FF]" : ""} font-semibold bg-clip-text`}

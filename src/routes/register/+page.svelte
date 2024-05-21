@@ -7,10 +7,7 @@
   let isLoading = false;
   function handleSubmit(event) {
     event.preventDefault();
-     isLoading = true;
-    // Validate form fields (add your validation logic here)
-
-    // Emit login event with form data 
+     isLoading = true; 
 	fetch("https://golang-production-ebec.up.railway.app/register",{
 		method: "POST",
 		body: JSON.stringify({
