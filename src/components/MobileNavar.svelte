@@ -54,7 +54,7 @@
       >
     {/each}
     {#if isLogin == false}
-      <div class="flex flex-col gap-2">
+      <div class="flex flex-col gap-2 pb-4">
         <a
           class=" border px-5 py-1 rounded-lg text-black"
           href="/register">Register</a
@@ -64,7 +64,7 @@
         >
       </div>
     {:else if isLogin == true}
-      <button on:click={logout} class="border px-4 py-1 rounded-lg"
+      <button on:click={logout} class="border px-4 py-1 mb-4 rounded-lg"
         >Log Out</button
       >
     {/if}
