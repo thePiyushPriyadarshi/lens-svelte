@@ -53,9 +53,13 @@
     <div class="hidden lg:block">
       <div class="flex gap-6 items-center justify-center">
         <a href="https://makemyweb.ai/en" target="_blank">MakeMyWeb.</a>
+        <a
+            class={`"bg-gradient-to-r text-transparent from-[#0796FF] to-[#91F6FF]" font-semibold bg-clip-text`}
+            href={"/"}>Home</a
+          >
         {#each navbarOptions as option}
           <a
-            class={`${option.path == "/" ? "bg-gradient-to-r text-transparent from-[#0796FF] to-[#91F6FF]" : ""} font-semibold bg-clip-text`}
+            class={`font-semibold bg-clip-text`}
             href={option.path}>{option.label}</a
           >
         {/each}
