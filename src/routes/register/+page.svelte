@@ -11,7 +11,7 @@
 	fetch("https://golang-production-ebec.up.railway.app/register",{
 		method: "POST",
 		body: JSON.stringify({
-			email,
+			email : email.toLowerCase(),
       name,
 			password
 		}),
