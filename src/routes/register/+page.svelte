@@ -9,6 +9,13 @@
     event.preventDefault();
     isLoading = true;
     email = email.toLowerCase()
+    if(email == "" || name == "" || password == ""){
+      alert("Please fill all the fields")
+    isLoading = false;
+
+      return;
+    }
+    
     fetch("https://golang-production-ebec.up.railway.app/register", {
       method: "POST",
       body: JSON.stringify({
@@ -31,6 +38,8 @@
       })
       .catch((error) => {
         console.error("Error:", error);
+    isLoading = false;
+
       });
   }
 </script>

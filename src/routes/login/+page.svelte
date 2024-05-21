@@ -6,8 +6,14 @@
   let isLoading = false;
   function handleSubmit(event) {
     event.preventDefault();
-    isLoading = true; 
-    email = email.toLowerCase()
+    isLoading = true;
+    email = email.toLowerCase();
+
+    if (email == "" || password == "") {
+      alert("Please fill all the fields");
+      isLoading = false;
+      return;
+    }
     fetch("https://golang-production-ebec.up.railway.app/login", {
       method: "POST",
       body: JSON.stringify({
@@ -45,34 +51,34 @@
         class="bg-gradient-to-r font-semibold from-[#0796FF] to-[#91F6FF] bg-clip-text text-transparent"
         >LENS CORPORATION</span
       >
-    </h3> 
-      <label class="flex flex-col gap-1">
-        <p class="text-left">Email <sup class="text-rose-500">*</sup></p>
-        <input
-          required
-          class="bg-gray-800 w-[320px] text-white rounded-lg py-2 px-4"
-          type="email"
-          placeholder="Enter your email"
-          bind:value={email}
-        />
-      </label>
-      <label class="flex flex-col gap-1">
-        <p class="text-left">Password <sup class="text-rose-500">*</sup></p>
-        <input
-          required
-          class="bg-gray-800 w-[320px] text-white rounded-lg py-2 px-4"
-          type="password"
-          placeholder="Enter your password"
-          bind:value={password}
-        />
-      </label>
-      <p class="text-left text-rose-500">{error}</p>
-      <button
-        on:click={handleSubmit}
-        disabled={isLoading}
-        type="submit"
-        class="border-white disabled:bg-gray-400 hover:bg-white hover:text-black transition-all duration-200 border px-6 py-2 w-[320px] rounded-lg"
-        >Login</button
-      > 
+    </h3>
+    <label class="flex flex-col gap-1">
+      <p class="text-left">Email <sup class="text-rose-500">*</sup></p>
+      <input
+        required
+        class="bg-gray-800 w-[320px] text-white rounded-lg py-2 px-4"
+        type="email"
+        placeholder="Enter your email"
+        bind:value={email}
+      />
+    </label>
+    <label class="flex flex-col gap-1">
+      <p class="text-left">Password <sup class="text-rose-500">*</sup></p>
+      <input
+        required
+        class="bg-gray-800 w-[320px] text-white rounded-lg py-2 px-4"
+        type="password"
+        placeholder="Enter your password"
+        bind:value={password}
+      />
+    </label>
+    <p class="text-left text-rose-500">{error}</p>
+    <button
+      on:click={handleSubmit}
+      disabled={isLoading}
+      type="submit"
+      class="border-white disabled:bg-gray-400 hover:bg-white hover:text-black transition-all duration-200 border px-6 py-2 w-[320px] rounded-lg"
+      >Login</button
+    >
   </div>
 </div>
