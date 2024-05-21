@@ -46,7 +46,7 @@
 
 <div class="min-h-screen mt-32">
   <div
-    class="max-w-[480px] hover:border-[#34D4AE] border-2 shadow-[#34D4AE] hover:shadow-2xl bg-zinc-900 hover:bg-transparent flex flex-col items-center gap-10 w-11/12 mx-auto border-gray-300 rounded-lg py-14"
+    class="max-w-[480px] hover:border-[#34D4AE] border-2 shadow-[#34D4AE] hover:shadow-2xl bg-zinc-100 dark:bg-zinc-900 hover:bg-transparent flex flex-col items-center gap-10 w-11/12 mx-auto border-gray-300 rounded-lg py-14"
   >
     <h3 class="flex flex-col text-xl">
       Register to
@@ -59,7 +59,7 @@
         <p class="text-left">Full Name <sup class="text-rose-500">*</sup></p>
         <input
           required
-          class="bg-gray-800 w-[320px] text-white rounded-lg py-2 px-4"
+          class="dark:bg-gray-800 w-[320px] dark:text-white rounded-lg py-2 px-4"
           type="text"
           placeholder="Enter your name"
           bind:value={name}
@@ -69,7 +69,7 @@
         <p class="text-left">Email <sup class="text-rose-500">*</sup></p>
         <input
           required
-          class="bg-gray-800 w-[320px] text-white rounded-lg py-2 px-4"
+          class="dark:bg-gray-800 w-[320px] dark:text-white rounded-lg py-2 px-4"
           type="email"
           placeholder="Enter your email"
           bind:value={email}
@@ -79,7 +79,7 @@
         <p class="text-left">Password <sup class="text-rose-500">*</sup></p>
         <input
           required
-          class="bg-gray-800 w-[320px] text-white rounded-lg py-2 px-4"
+          class="dark:bg-gray-800 w-[320px] dark:text-white rounded-lg py-2 px-4"
           type="password"
           placeholder="Enter your password"
           bind:value={password}
@@ -90,7 +90,7 @@
         on:click={handleSubmit}
         disabled={isLoading}
         type="submit"
-        class="border-white disabled:bg-gray-400 hover:bg-white hover:text-black transition-all duration-200 border px-6 py-2 w-[320px] rounded-lg"
+        class="dark:border-white border-black disabled:bg-gray-400 dark:hover:bg-white hover:bg-black hover:text-white  dark:hover:text-black transition-all duration-200 border px-6 py-2 w-[320px] rounded-lg"
         >Register</button
       > 
   </div>
