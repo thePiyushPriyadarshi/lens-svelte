@@ -81,7 +81,7 @@
 	  disabled={isLoading}
 	  type="submit"
         class="border-white disabled:bg-gray-400 hover:bg-white hover:text-black transition-all duration-200 border px-6 py-2 w-[320px] rounded-lg"
-        >Login</button
+        >Register</button
       >
     </form>
   </div>
